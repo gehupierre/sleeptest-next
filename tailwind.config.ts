@@ -13,6 +13,12 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        "ion-bluelite": "#E5F2FF",
+        "ion-blue": "#2478BA",
+        "ion-orange": "#FF7F00",
+        "ion-green": "#690",
+      },
     },
   },
   plugins: [],
