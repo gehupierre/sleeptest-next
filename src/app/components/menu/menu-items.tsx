@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { NavDropdownIcon } from "@/app/components/ui/nav/nav-dropdown-icon";
+import { NavDropdownIcon } from "@components/ui/nav/nav-dropdown-icon";
 import {
   NavDropDown,
   NavDropDownListItem,
-} from "@/app/components/ui/nav/nav-dropdown";
-import { NavItem } from "@/app/components/ui/nav/nav-item";
+} from "@components/ui/nav/nav-dropdown";
+import { NavItem } from "@components/ui/nav/nav-item";
 
 export function MenuItems() {
   const [isHovered, setHovered] = useState<boolean>();
@@ -17,7 +17,14 @@ export function MenuItems() {
         <NavItem
           label="about sleep apnea"
           href="#responsive-header"
-          icon={<NavDropdownIcon />}
+          icon={
+            <NavDropdownIcon
+              style={{
+                transform: isHovered ? "rotate(180deg)" : "",
+                transition: "transform 0.2s ease-in-out",
+              }}
+            />
+          }
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         >

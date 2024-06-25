@@ -24,15 +24,15 @@ export function NavDropDown({ isOpened = false, ...props }) {
     <AnimatePresence>
       {isOpened ? (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
           transition={{
-            delay: 0.1,
-            stiffness: 10,
+            delay: 0.2,
+            type: "spring",
             ease: "easeInOut",
           }}
-          exit={{ opacity: 0 }}
-          className="absolute top-6 z-10 w-56 bg-ion-bluelite divide-y divide-ion-blue rounded-lg shadow"
+          exit={{ opacity: 0, height: 0 }}
+          className="absolute top-7 z-10 w-56 bg-ion-bluelite divide-y divide-ion-blue rounded-lg shadow-md"
         >
           <ul className="py-2 text-left">{props.children}</ul>
         </motion.div>
