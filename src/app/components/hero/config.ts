@@ -2,6 +2,7 @@ import { Variants } from "framer-motion";
 
 export type ImageSpec = {
   alt: string;
+  href: string;
   src: string;
   width?: number;
   height?: number;
@@ -37,6 +38,7 @@ export const ANIMATION = {
     {
       width: 640,
       height: 160,
+      href: "#popup-01",
       alt: "Banner CTA",
       src: "/images/call-to-action-banner.png",
     } as ImageSpec,

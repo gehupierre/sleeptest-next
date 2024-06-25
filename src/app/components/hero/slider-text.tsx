@@ -60,12 +60,14 @@ export const SliderText: React.FC<SliderText> = ({ duration = 5, texts }) => {
           {typeof text === "string" ? (
             text
           ) : (
-            <Image
-              width={text.width ?? 640}
-              height={text.height ?? 160}
-              alt={text.alt}
-              src={text.src}
-            />
+            <a href={text.href}>
+              <Image
+                width={text.width ?? 640}
+                height={text.height ?? 160}
+                alt={text.alt}
+                src={text.src}
+              />
+            </a>
           )}
         </strong>
       ))}
