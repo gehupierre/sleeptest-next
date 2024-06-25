@@ -1,6 +1,6 @@
 import { Metadata } from "next/types";
 import { Header } from "@components/header";
-import { HeroSlider } from "@components/hero-slider";
+import { HeroSlider } from "@components/hero/hero-slider";
 
 const META_CONTENT = {
   title: "GetSleepTest.com - Sleep Apnea - Home Sleep Study",
