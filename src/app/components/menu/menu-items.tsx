@@ -1,9 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { NavDropdownIcon } from "@components/nav/nav-dropdown-icon";
-import { NavDropDown, NavDropDownListItem } from "@components/nav/nav-dropdown";
-import { NavItem } from "@components/nav/nav-item";
+import { NavDropdownIcon } from "@/app/components/ui/nav/nav-dropdown-icon";
+import {
+  NavDropDown,
+  NavDropDownListItem,
+} from "@/app/components/ui/nav/nav-dropdown";
+import { NavItem } from "@/app/components/ui/nav/nav-item";
 
 export function MenuItems() {
   const [isHovered, setHovered] = useState<boolean>();
