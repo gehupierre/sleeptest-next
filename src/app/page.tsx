@@ -1,5 +1,6 @@
 import { Metadata } from "next/types";
 import { Header } from "@components/header";
+import { HeroSlider } from "@components/hero-slider";
 
 const META_CONTENT = {
   title: "GetSleepTest.com - Sleep Apnea - Home Sleep Study",
@@ -23,7 +24,9 @@ export default function Home() {
   return (
     <div className="w-full max-w-7xl mx-auto drop-shadow-xl">
       <Header />
-      <main></main>
+      <main>
+        <HeroSlider />
+      </main>
       <footer></footer>
     </div>
   );
