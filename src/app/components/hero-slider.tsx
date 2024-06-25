@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Image from "next/image";
 import {
   AnimatePresence,
@@ -8,7 +8,9 @@ import {
   animate,
   motion,
   useMotionValue,
+  useTransform,
 } from "framer-motion";
+import { Loading } from "@ui/loading";
 
 const images = [
   { alt: "Banner step 1", src: "/images/banner0.jpg" },
@@ -31,12 +33,17 @@ const ANIMATION = {
       },
     } as Variants,
   },
-  DURATION: 2.5,
+  DURATION: 3.5,
 };
 
 export function HeroSlider() {
   const [slide, setSlide] = useState<number>(0);
   const sliderPos = useMotionValue(slide);
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, Math.round);
+  const titleIndex = rounded.get();
+  const baseTitleStyle =
+    "h-[56px] w-[640px] text-4xl font-extralight my-12 mx-auto px-14 text-center";
 
   useEffect(() => {
     const sliding = animate(sliderPos, slide, {
@@ -56,17 +63,17 @@ export function HeroSlider() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slide]);
 
+  useEffect(() => {
+    const controls = animate(count, 5, {
+      duration: ANIMATION.DURATION * 10,
+    });
+
+    return () => controls.stop();
+  }, [count]);
+
   return (
-    <div>
-      <div className="hidden">
-        <Image
-          src="/images/loading.gif"
-          alt="loading..."
-          width={150}
-          height={150}
-        />
-      </div>
-      <div>
+    <Suspense fallback={<Loading />}>
+      <div className="relative">
         <AnimatePresence>
           <motion.img
             key={slide}
@@ -80,14 +87,53 @@ export function HeroSlider() {
             animate="show"
           />
         </AnimatePresence>
-      </div>
-      <div className="title-wrapper hidden">
-        <div className="title-holder">
-          <strong className="title">remember sleeping like this?</strong>
-          <strong className="title">what happened?</strong>
-          <strong className="title">know now for little or no cost...</strong>
-          <strong className="title">...with a home sleep apnea test!</strong>
-          <strong className="title home-sleep-test-slide">
+        {<motion.h1>{rounded}</motion.h1>}
+
+        <div
+          className={`absolute ${
+            titleIndex === 0 ? "" : "bg-gray-900/75"
+          } text-white`}
+          style={{
+            width: 640,
+            height: 160,
+            top: 160,
+            left: 320,
+          }}
+        >
+          <strong
+            className={`${baseTitleStyle} ${
+              titleIndex === 1 ? "block" : "hidden"
+            }`}
+          >
+            remember sleeping like this?
+          </strong>
+
+          <strong
+            className={`${baseTitleStyle} ${
+              titleIndex === 2 ? "block" : "hidden"
+            }`}
+          >
+            what happened?
+          </strong>
+          <strong
+            className={`${baseTitleStyle} ${
+              titleIndex === 3 ? "block" : "hidden"
+            }`}
+          >
+            know now for little or no cost...
+          </strong>
+          <strong
+            className={`${baseTitleStyle} ${
+              titleIndex === 4 ? "block" : "hidden"
+            }`}
+          >
+            ...with a home sleep apnea test!
+          </strong>
+          <strong
+            className={`${baseTitleStyle} my-3 ${
+              titleIndex === 5 ? "block" : "hidden"
+            } home-sleep-test-slide`}
+          >
             <Image
               width={640}
               height={160}
@@ -97,6 +143,6 @@ export function HeroSlider() {
           </strong>
         </div>
       </div>
-    </div>
+    </Suspense>
   );
 }
