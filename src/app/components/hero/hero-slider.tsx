@@ -9,15 +9,17 @@ import { ANIMATION } from "@components/hero/config";
 
 export function HeroSlider() {
   return (
-    <Suspense fallback={<Loading />}>
-      <div className="relative">
-        <SliderImages
-          images={ANIMATION.IMAGES}
-          variants={ANIMATION.VARIANTS}
-          duration={ANIMATION.DURATION}
-        />
-        <SliderText duration={ANIMATION.DURATION} texts={ANIMATION.TEXTS} />
-      </div>
-    </Suspense>
+    <section>
+      <Suspense fallback={<Loading />}>
+        <div className="relative h-[480px]">
+          <SliderImages
+            images={ANIMATION.IMAGES}
+            variants={ANIMATION.VARIANTS}
+            duration={ANIMATION.DURATION}
+          />
+          <SliderText duration={ANIMATION.DURATION} texts={ANIMATION.TEXTS} />
+        </div>
+      </Suspense>
+    </section>
   );
 }
