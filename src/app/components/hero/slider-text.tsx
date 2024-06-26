@@ -11,21 +11,23 @@ import {
 } from "framer-motion";
 import { ImageSpec } from "@components/hero/config";
 
-const baseTitleStyle =
-  "h-[56px] w-[640px] text-4xl font-extralight my-12 mx-auto px-14 text-center";
-
-type SliderText = {
+const DURATION_FACTOR = 10;
+type SliderTextProps = {
   texts: Array<string | ImageSpec>;
   duration?: number;
 };
-export const SliderText: React.FC<SliderText> = ({ duration = 5, texts }) => {
+export const SliderText: React.FC<SliderTextProps> = ({
+  duration = 5,
+  texts,
+}) => {
   const count = useMotionValue(0);
   const rounded = useTransform(count, Math.round);
   const [titleIndex, setIndex] = useState<number>(rounded.get());
+  const totalTexts = texts.length;
 
   useEffect(() => {
-    const controls = animate(count, 5, {
-      duration: duration * 10,
+    const controls = animate(count, totalTexts, {
+      duration: duration * DURATION_FACTOR,
     });
 
     return () => {
@@ -53,7 +55,7 @@ export const SliderText: React.FC<SliderText> = ({ duration = 5, texts }) => {
       {texts.map((text, i) => (
         <strong
           key={i}
-          className={`${baseTitleStyle} ${
+          className={`h-[56px] w-[640px] text-4xl font-extralight my-12 mx-auto px-14 text-center ${
             typeof text === "string" ? "" : "my-3"
           } ${titleIndex === i + 1 ? "block" : "hidden"}`}
         >
