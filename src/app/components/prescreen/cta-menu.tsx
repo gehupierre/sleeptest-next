@@ -48,10 +48,7 @@ function SocialCTA() {
 
 export const CTAMenu: React.FC = () => {
   return (
-    <div
-      id="step-1"
-      className="flex w-full justify-between bg-white px-40 py-6"
-    >
+    <div className="flex w-full justify-between bg-white px-40 py-6">
       <Step1CTA />
       <PhoneCTA />
       <SocialCTA />

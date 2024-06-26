@@ -1,7 +1,24 @@
+import dynamic from "next/dynamic";
 import { Metadata } from "next/types";
 import { Header } from "@components/header";
-import { HeroSlider } from "@components/hero/hero-slider";
+import { Loading } from "@components/ui/loading";
 import { PreScreen } from "@components/prescreen/pre-screen";
+
+const HeroSlider = dynamic(
+  () => import("@components/hero/hero-slider").then((cmp) => cmp.HeroSlider),
+  {
+    loading: () => <Loading className="mx-auto" />,
+    ssr: false,
+  }
+);
+
+const ScreenStepOne = dynamic(
+  () => import("@components/screens/step-1").then((cmp) => cmp.ScreenStepOne),
+  {
+    loading: () => <Loading className="mx-auto" />,
+    ssr: false,
+  }
+);
 
 const META_CONTENT = {
   title: "GetSleepTest.com - Sleep Apnea - Home Sleep Study",
@@ -28,6 +45,7 @@ export default function Home() {
       <main>
         <HeroSlider />
         <PreScreen />
+        <ScreenStepOne />
       </main>
       <footer></footer>
     </div>
