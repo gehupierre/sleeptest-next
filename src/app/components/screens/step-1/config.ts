@@ -35,4 +35,5 @@ export const SLIDESHOW = {
       ctaText: "take free risk assessment",
     },
   ],
+  DURATION: 12,
 };

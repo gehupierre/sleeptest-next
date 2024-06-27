@@ -39,7 +39,7 @@ export function ScreenStepOne() {
         <div className="h-[480px]">
           <SliderImages
             variants={ANIMATION.VARIANTS}
-            duration={ANIMATION.DURATION}
+            duration={SLIDESHOW.DURATION}
             images={SLIDESHOW.images}
             texts={SLIDESHOW.texts}
             TextComp={SlideshowText}

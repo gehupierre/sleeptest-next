@@ -43,5 +43,5 @@ export const ANIMATION = {
       src: "/images/call-to-action-banner.png",
     } as ImageSpec,
   ],
-  DURATION: 3.5,
+  DURATION: 7.5,
 };

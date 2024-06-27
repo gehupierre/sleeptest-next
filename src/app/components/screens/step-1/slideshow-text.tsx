@@ -18,7 +18,7 @@ export const SlideshowText: React.FC<TextProps> = ({
 }) => {
   return (
     <div className="">
-      <h3 className="text-ion-bluesky text-2xl font-light">{title}</h3>
+      <h3 className="text-ion-bluesky text-2xl font-light mb-1">{title}</h3>
       <p>{content}</p>
       <div className="my-4">
         <a href={ctaHref} className="text-ion-orange text-lg">
