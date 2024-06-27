@@ -15,6 +15,7 @@ const config: Config = {
       },
       colors: {
         "ion-bluelite": "#E5F2FF",
+        "ion-bluesky": "#5fa6e0",
         "ion-blue": "#2478BA",
         "ion-orange": "#FF7F00",
         "ion-green": "#690",

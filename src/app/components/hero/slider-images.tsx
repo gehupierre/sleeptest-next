@@ -5,7 +5,7 @@ import { Variants } from "framer-motion";
 import { AnimatedItem } from "@components/ui/animated-item";
 import { useAnimatedList } from "@app/hooks/use-animated-list";
 
-type SliderImagesProps = {
+export type SliderImagesProps = {
   images: {
     alt: string;
     src: string;

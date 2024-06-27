@@ -13,7 +13,10 @@ const HeroSlider = dynamic(
 );
 
 const ScreenStepOne = dynamic(
-  () => import("@components/screens/step-1").then((cmp) => cmp.ScreenStepOne),
+  () =>
+    import("@components/screens/step-1/step-1").then(
+      (cmp) => cmp.ScreenStepOne
+    ),
   {
     loading: () => <Loading className="mx-auto" />,
     ssr: false,
