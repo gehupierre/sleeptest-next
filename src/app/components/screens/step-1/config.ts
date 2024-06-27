@@ -1,10 +1,3 @@
-export type TextProps = {
-  title: string;
-  content: string;
-  ctaText: string;
-  ctaHref: string;
-};
-
 export const SLIDESHOW = {
   images: [
     { alt: "Loud Snoring", src: "/images/img-02.jpg" },

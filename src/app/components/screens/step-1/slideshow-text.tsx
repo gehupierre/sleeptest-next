@@ -1,7 +1,13 @@
 "use client";
 
 import React from "react";
-import { TextProps } from "./config";
+
+type TextProps = {
+  title: string;
+  content: string;
+  ctaText: string;
+  ctaHref: string;
+};
 
 export const TextComp: React.FC<TextProps> = ({
   title,

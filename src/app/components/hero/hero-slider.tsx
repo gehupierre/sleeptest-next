@@ -2,8 +2,8 @@
 
 import React from "react";
 
-import { SliderImages } from "@components/hero/slider-images";
-import { SliderText } from "@components/hero/slider-text";
+import { SliderText } from "@components/ui/slider/slider-text";
+import { SliderImages } from "@components/ui/slider/slider-images";
 import { ANIMATION } from "@components/hero/config";
 
 export function HeroSlider() {

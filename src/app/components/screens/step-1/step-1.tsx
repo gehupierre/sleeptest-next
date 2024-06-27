@@ -2,7 +2,7 @@
 
 import { SLIDESHOW } from "@components/screens/step-1/config";
 import { TextComp } from "@components/screens/step-1/slideshow-text";
-import { SliderImages } from "@components/hero/slider-images";
+import { SliderImages } from "@components/ui/slider/slider-images";
 import { ANIMATION } from "@components/hero/config";
 
 export function ScreenStepOne() {
