@@ -1,17 +1,12 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
-import {
-  animate,
-  motion,
-  useMotionValue,
-  useMotionValueEvent,
-  useTransform,
-} from "framer-motion";
+import { motion } from "framer-motion";
 import { ImageSpec } from "@components/hero/config";
+import { AnimatedItem } from "@components/ui/animated-item";
+import { useAnimatedList } from "@app/hooks/use-animated-list";
 
-const DURATION_FACTOR = 10;
 type SliderTextProps = {
   texts: Array<string | ImageSpec>;
   duration?: number;
@@ -20,30 +15,16 @@ export const SliderText: React.FC<SliderTextProps> = ({
   duration = 5,
   texts,
 }) => {
-  const count = useMotionValue(0);
-  const rounded = useTransform(count, Math.round);
-  const [titleIndex, setIndex] = useState<number>(rounded.get());
-  const totalTexts = texts.length;
-
-  useEffect(() => {
-    const controls = animate(count, totalTexts, {
-      duration: duration * DURATION_FACTOR,
-    });
-
-    return () => {
-      controls.stop();
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [count]);
-
-  useMotionValueEvent(rounded, "change", (latest) => {
-    setIndex(latest);
+  const { index: titleIndex } = useAnimatedList({
+    duration,
+    total: texts.length + 1,
+    repeat: 0,
   });
 
   return (
     <motion.div
       className={`absolute ${
-        rounded.get() === 0 ? "" : "bg-gray-900/75"
+        titleIndex < 2 ? "" : "bg-gray-900/75"
       } text-white`}
       style={{
         width: 640,
@@ -53,11 +34,15 @@ export const SliderText: React.FC<SliderTextProps> = ({
       }}
     >
       {texts.map((text, i) => (
-        <strong
+        <AnimatedItem
           key={i}
+          animate={{
+            // Note: Delay 1st frame by 1 step
+            opacity: titleIndex === i + 2 ? 1 : 0,
+          }}
           className={`h-[56px] w-[640px] text-4xl font-extralight my-12 mx-auto px-14 text-center ${
             typeof text === "string" ? "" : "my-3"
-          } ${titleIndex === i + 1 ? "block" : "hidden"}`}
+          } ${titleIndex === i + 2 ? "block" : "hidden"}`}
         >
           {typeof text === "string" ? (
             text
@@ -71,7 +56,7 @@ export const SliderText: React.FC<SliderTextProps> = ({
               />
             </a>
           )}
-        </strong>
+        </AnimatedItem>
       ))}
     </motion.div>
   );
