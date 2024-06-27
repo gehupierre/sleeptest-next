@@ -9,7 +9,7 @@ type TextProps = {
   ctaHref: string;
 };
 
-export const TextComp: React.FC<TextProps> = ({
+export const SlideshowText: React.FC<TextProps> = ({
   title,
   content,
   ctaText,

@@ -1,7 +1,7 @@
 "use client";
 
 import { SLIDESHOW } from "@components/screens/step-1/config";
-import { TextComp } from "@components/screens/step-1/slideshow-text";
+import { SlideshowText } from "@components/screens/step-1/slideshow-text";
 import { SliderImages } from "@components/ui/slider/slider-images";
 import { ANIMATION } from "@components/hero/config";
 
@@ -33,7 +33,7 @@ export function ScreenStepOne() {
           duration={ANIMATION.DURATION}
           images={SLIDESHOW.images}
           texts={SLIDESHOW.texts}
-          TextComp={TextComp}
+          TextComp={SlideshowText}
           showControls={true}
         />
       </div>
