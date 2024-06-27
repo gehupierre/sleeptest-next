@@ -7,6 +7,7 @@ import {
   NavDropDownListItem,
 } from "@components/ui/nav/nav-dropdown";
 import { NavItem } from "@components/ui/nav/nav-item";
+import { ArrowRightIcon } from "@components/ui/icons/arrow-right";
 
 export function MenuItems() {
   const [isHovered, setHovered] = useState<boolean>();
@@ -51,14 +52,7 @@ export function MenuItems() {
         <NavItem
           label="login"
           href="#login"
-          icon={
-            <NavDropdownIcon
-              style={{
-                marginLeft: 5,
-                transform: "rotate(-90deg)",
-              }}
-            />
-          }
+          icon={<ArrowRightIcon className="ml-[5px]" />}
           className="inline-block px-4 py-2 border rounded uppercase text-sm text-white bg-ion-orange hover:text-white hover:bg-red-500"
           style={{ marginTop: -7, marginBottom: -7 }}
         />

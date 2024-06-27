@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { ArrowRightIcon } from "@components/ui/icons/arrow-right";
 
 type TextProps = {
   title: string;
@@ -21,7 +22,7 @@ export const SlideshowText: React.FC<TextProps> = ({
       <p>{content}</p>
       <div className="my-4">
         <a href={ctaHref} className="text-ion-orange text-lg">
-          {ctaText}
+          {ctaText} <ArrowRightIcon className="inline-block mb-[2px]" />
         </a>
       </div>
     </div>
