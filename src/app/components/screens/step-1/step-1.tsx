@@ -1,9 +1,9 @@
 "use client";
 
-import { ANIMATION } from "@components/hero/config";
 import { SLIDESHOW } from "@components/screens/step-1/config";
-import { SlideshowText } from "@components/screens/step-1/slideshow-text";
-import { SlideshowImages } from "@components/screens/step-1/slideshow-images";
+import { TextComp } from "@components/screens/step-1/slideshow-text";
+import { SliderImages } from "@components/hero/slider-images";
+import { ANIMATION } from "@components/hero/config";
 
 export function ScreenStepOne() {
   return (
@@ -27,10 +27,17 @@ export function ScreenStepOne() {
           </p>
         </div>
       </div>
-      <div className="relative">
-        <SlideshowImages images={SLIDESHOW.images} />
-        <SlideshowText duration={ANIMATION.DURATION} texts={SLIDESHOW.texts} />
+      <div className="relative-">
+        <SliderImages
+          variants={ANIMATION.VARIANTS}
+          duration={ANIMATION.DURATION}
+          images={SLIDESHOW.images}
+          texts={SLIDESHOW.texts}
+          TextComp={TextComp}
+          showControls={true}
+        />
       </div>
+      <div className="h-96"></div>
     </section>
   );
 }

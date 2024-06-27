@@ -37,5 +37,5 @@ export function useAnimatedList({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index, total]);
 
-  return { index };
+  return { index, showIndex: setIndex };
 }
