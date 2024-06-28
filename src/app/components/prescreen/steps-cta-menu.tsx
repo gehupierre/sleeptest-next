@@ -4,10 +4,14 @@ import { PhoneIcon } from "@components/ui/icons/phone";
 import { FacebookIcon } from "@components/ui/icons/facebook";
 import { TwitterIcon } from "@components/ui/icons/twitter";
 
-function Step1CTA() {
+type StepCTAProps = {
+  label: string;
+};
+
+function StepCTA({ label }: StepCTAProps) {
   return (
     <a href="#step-1" className="text-ion-green hover:text-ion-blue group">
-      <span className="text-lg">living with sleep apnea</span>
+      <span className="text-lg">{label}</span>
       <div className="inline-block w-3 h-4 ml-4">
         <span className="sr-only">arrow</span>
         <div className="h-3 w-[3px] mb-[-8px] mx-[10.5px] bg-ion-green group-hover:bg-ion-blue" />
@@ -46,10 +50,18 @@ function SocialCTA() {
   );
 }
 
-export const CTAMenu: React.FC = () => {
+type StepsCTAMenuProps = StepCTAProps & {
+  className?: string;
+};
+export const StepsCTAMenu: React.FC<StepsCTAMenuProps> = ({
+  label,
+  className,
+}) => {
   return (
-    <div className="flex w-full justify-between bg-white px-40 py-6">
-      <Step1CTA />
+    <div
+      className={`flex w-full justify-between bg-white px-40 py-6 ${className}`}
+    >
+      <StepCTA label={label} />
       <PhoneCTA />
       <SocialCTA />
     </div>

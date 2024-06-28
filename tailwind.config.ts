@@ -19,9 +19,10 @@ const config: Config = {
         "ion-blue": "#2478BA",
         "ion-orange": "#FF7F00",
         "ion-green": "#690",
+        "ion-mint-lite": "#f8faf2",
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };
 export default config;

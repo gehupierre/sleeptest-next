@@ -18,7 +18,16 @@ const ScreenStepOne = dynamic(
       (cmp) => cmp.ScreenStepOne
     ),
   {
-    loading: () => <Loading className="mx-auto" />,
+    ssr: false,
+  }
+);
+
+const ScreenStepTwo = dynamic(
+  () =>
+    import("@components/screens/step-2/step-2").then(
+      (cmp) => cmp.ScreenStepTwo
+    ),
+  {
     ssr: false,
   }
 );
@@ -49,6 +58,7 @@ export default function Home() {
         <HeroSlider />
         <PreScreen />
         <ScreenStepOne />
+        <ScreenStepTwo />
       </main>
       <footer></footer>
     </div>
