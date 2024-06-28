@@ -3,6 +3,7 @@ import { Metadata } from "next/types";
 import { Header } from "@components/header";
 import { Loading } from "@components/ui/loading";
 import { PreScreen } from "@components/prescreen/pre-screen";
+import { Footer } from "@components/footer";
 
 const HeroSlider = dynamic(
   () => import("@components/hero/hero-slider").then((cmp) => cmp.HeroSlider),
@@ -60,7 +61,7 @@ export default function Home() {
         <ScreenStepOne />
         <ScreenStepTwo />
       </main>
-      <footer></footer>
+      <Footer />
     </div>
   );
 }
