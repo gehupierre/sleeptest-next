@@ -26,7 +26,12 @@ export function ScreenStepTwo() {
                 width={382}
                 height={136}
               />
-              <h2 className="text-ion-blue text-4xl font-light my-3">
+              <h2
+                className="text-ion-blue text-4xl font-light my-3 pr-7"
+                style={{
+                  lineHeight: "56px",
+                }}
+              >
                 Test for sleep apnea in the comfort of your home at{" "}
                 <span className="text-ion-green">little or no cost*</span>
               </h2>
@@ -37,12 +42,12 @@ export function ScreenStepTwo() {
                 width={385}
                 height={147}
               />
-              <h3 className="text-ion-blue text-xl font-light mb-3 pr-16">
+              <h3 className="text-ion-blue text-3xl font-light mb-3 pr-16 leading-10">
                 1 in 5 people suffer from undiagnosed Sleep Apnea. You
                 can&lsquo;t afford NOT to know the truth about your sleep
                 health!
               </h3>
-              <p className="text-slate-600 pr-16">
+              <p className="text-slate-600 pr-16 leading-7">
                 Do you and/or your partner suffer from disruptive snoring? Do
                 you always feel tired during the daytime causing you to doze off
                 or fall asleep? If yes, then you may be at risk for Sleep Apnea.
