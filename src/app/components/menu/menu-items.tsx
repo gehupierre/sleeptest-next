@@ -7,14 +7,16 @@ import {
 import { NavItem } from "@components/ui/nav/nav-item";
 import { NavItemWithDropdown } from "@components/ui/nav/nav-item-with-dropdown";
 import { ArrowRightIcon } from "@components/ui/icons/arrow-right";
+import { HamburgerMenu } from "./hamburger-menu";
 
 type MenuWrapper = {
   children: React.ReactNode;
 };
 function MenuWrapper({ children }: MenuWrapper) {
   return (
-    <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+    <div className="md:w-full block flex-grow lg:flex lg:items-center lg:w-auto">
       <div className="hidden md:flex justify-end lg:flex-grow">{children}</div>
+      <HamburgerMenu />
     </div>
   );
 }
@@ -22,7 +24,7 @@ function MenuWrapper({ children }: MenuWrapper) {
 export function MenuItems() {
   return (
     <MenuWrapper>
-      <NavItemWithDropdown label="about sleep apnea" href="#responsive-header">
+      <NavItemWithDropdown label="about sleep apnea" href="#">
         <NavDropDown>
           <NavDropDownListItem href="#step-1" label="living with sleep apnea" />
           <NavDropDownListItem href="#step-2" label="testing for sleep apnea" />

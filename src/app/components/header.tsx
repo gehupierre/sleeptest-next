@@ -4,7 +4,7 @@ import { MenuLogo } from "@components/menu/menu-logo";
 export function Header() {
   return (
     <header className="w-full">
-      <nav className="flex w-full bg-ion-bluelite px-36">
+      <nav className="flex md:px-36 w-full bg-ion-bluelite">
         <MenuLogo />
         <MenuItems />
       </nav>
