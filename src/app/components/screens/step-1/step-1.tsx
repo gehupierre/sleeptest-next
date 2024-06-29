@@ -16,7 +16,7 @@ export function ScreenStepOne() {
       <section>
         <div
           id="step-1"
-          className="block md:flex w-full bg-white p-3 lg:px-40 md:py-6 lg:pb-20 border-b-2 lg:border-b-0"
+          className="block md:flex w-full bg-white p-3 lg:px-12 xl:px-40 md:py-6 lg:pb-12 xl:pb-20 border-b-2 lg:border-b-0"
         >
           <h2 className="flex-1 text-4xl font-extralight text-ion-blue mb-3">
             sleep better. live better.
@@ -39,7 +39,7 @@ export function ScreenStepOne() {
         </div>
       </section>
       <section>
-        <div className="hidden lg:block h-[480px]">
+        <div className="hidden lg:block h-[480px] overflow-hidden">
           <Slider
             variants={ANIMATION.VARIANTS}
             duration={SLIDESHOW.DURATION}
@@ -51,7 +51,7 @@ export function ScreenStepOne() {
         </div>
       </section>
       <section>
-        <Row className="bg-white p-3 lg:px-40 lg:py-16 gap-14">
+        <Row className="bg-white p-3 lg:px-12 xl:px-40 lg:py-6 lg:pt-10 xl:py-16 gap-14">
           <Column className="border-b-2 lg:border-b-0 pb-4 lg:pb-0">
             <h3 className="text-xl text-ion-blue">
               In-home sleep apnea test experience

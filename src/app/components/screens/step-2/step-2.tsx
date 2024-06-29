@@ -12,11 +12,11 @@ export function ScreenStepTwo() {
       <section>
         <StepsCTAMenu
           label="get diagnosed"
-          className="hidden md:block bg-ion-mint-lite border-y"
+          className="hidden md:block bg-ion-mint-lite border-y lg:border-t-0"
         />
         <div
           id="step-2"
-          className="flex w-full bg-ion-mint-lite p-3 md:p-10 lg:px-40 md:py-16 lg:pb-20"
+          className="flex w-full bg-ion-mint-lite p-3 md:p-10 lg:px-12 xl:px-40 md:py-16 xl:pb-20"
         >
           <Row>
             <Column className="lg:pr-7 pt-6 md:pt-0">

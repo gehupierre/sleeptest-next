@@ -65,7 +65,7 @@ export const StepsCTAMenu: React.FC<StepsCTAMenuProps> = ({
 }) => {
   return (
     <div
-      className={`block md:flex w-full justify-between bg-white lg:px-40 py-6 ${className}`}
+      className={`block md:flex w-full justify-between bg-white lg:px-4 xl:px-40 py-6 ${className}`}
     >
       <StepCTA label={label} />
       <PhoneCTA />

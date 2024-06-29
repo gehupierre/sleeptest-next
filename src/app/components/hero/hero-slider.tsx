@@ -17,7 +17,15 @@ export function HeroSlider() {
         width={640}
         height={480}
       />
-      <div className="hidden lg:block relative h-[480px]">
+      <Image
+        src="/images/banner0.jpg"
+        alt="Take free risk assessment test"
+        className="mx-auto hidden lg:block xl:hidden"
+        width={1024}
+        height={384}
+      />
+
+      <div className="hidden xl:block relative h-[480px]">
         <Slider
           images={ANIMATION.IMAGES}
           variants={ANIMATION.VARIANTS}
