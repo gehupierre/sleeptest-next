@@ -16,10 +16,10 @@ export function ScreenStepTwo() {
         />
         <div
           id="step-2"
-          className="flex w-full bg-ion-mint-lite p-3 md:px-40 md:py-16 md:pb-20"
+          className="flex w-full bg-ion-mint-lite p-3 md:p-10 lg:px-40 md:py-16 lg:pb-20"
         >
           <Row>
-            <Column className="md:pr-7 pt-6 md:pt-0">
+            <Column className="lg:pr-7 pt-6 md:pt-0">
               <Image
                 alt="Do you snore? Are you always tired?"
                 src="/images/headline1.png"
@@ -27,7 +27,7 @@ export function ScreenStepTwo() {
                 height={136}
               />
               <h2
-                className="text-ion-blue text-4xl font-light my-3 md:pr-7"
+                className="text-ion-blue text-4xl font-light my-3 lg:pr-7"
                 style={{
                   lineHeight: "56px",
                 }}
@@ -42,12 +42,12 @@ export function ScreenStepTwo() {
                 width={385}
                 height={147}
               />
-              <h3 className="text-ion-blue text-3xl font-light mb-3 md:pr-16 leading-10">
+              <h3 className="text-ion-blue text-3xl font-light mb-3 lg:pr-16 leading-10">
                 1 in 5 people suffer from undiagnosed Sleep Apnea. You
                 can&lsquo;t afford NOT to know the truth about your sleep
                 health!
               </h3>
-              <p className="text-slate-600 md:pr-16 leading-7">
+              <p className="text-slate-600 lg:pr-16 leading-7">
                 Do you and/or your partner suffer from disruptive snoring? Do
                 you always feel tired during the daytime causing you to doze off
                 or fall asleep? If yes, then you may be at risk for Sleep Apnea.
@@ -58,7 +58,7 @@ export function ScreenStepTwo() {
                 src="/images/headline2.png"
                 width={348}
                 height={44}
-                className="my-4 mx-auto md:mx-0"
+                className="my-4 md:mb-7 mx-auto lg:mx-0"
               />
             </Column>
             <Column className="flex-1 mx-[-10px] md:mx-0">
@@ -97,7 +97,7 @@ export function ScreenStepTwo() {
                 />
                 <ContactForm />
                 <div
-                  className="hidden- md:block w-full h-5 absolute bottom-[-20px]"
+                  className="md:block w-full h-5 absolute bottom-[-20px]"
                   style={{
                     backgroundImage: `url("/images/form_bg_bottom.png")`,
                     backgroundRepeat: "no-repeat",

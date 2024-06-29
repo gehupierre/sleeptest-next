@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const SleepTestCTA: React.FC = () => {
   return (
-    <a href="#popup-03" className="w-full block bg-white md:py-12">
+    <a href="#popup-03" className="w-full block bg-white lg:py-12">
       <Image
         src="/images/call-to-action.png"
         alt="Take free risk assessment test"

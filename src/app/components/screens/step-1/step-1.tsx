@@ -16,7 +16,7 @@ export function ScreenStepOne() {
       <section>
         <div
           id="step-1"
-          className="block md:flex w-full bg-white p-3 md:px-40 md:py-6 md:pb-20"
+          className="block md:flex w-full bg-white p-3 lg:px-40 md:py-6 lg:pb-20 border-b-2 lg:border-b-0"
         >
           <h2 className="flex-1 text-4xl font-extralight text-ion-blue mb-3">
             sleep better. live better.
@@ -39,7 +39,7 @@ export function ScreenStepOne() {
         </div>
       </section>
       <section>
-        <div className="hidden md:block h-[480px]">
+        <div className="hidden lg:block h-[480px]">
           <Slider
             variants={ANIMATION.VARIANTS}
             duration={SLIDESHOW.DURATION}
@@ -51,8 +51,8 @@ export function ScreenStepOne() {
         </div>
       </section>
       <section>
-        <Row className="bg-white p-3 md:px-40 md:py-16 gap-14">
-          <Column className="border-b-2 md:border-b-0 pb-4 md:pb-0">
+        <Row className="bg-white p-3 lg:px-40 lg:py-16 gap-14">
+          <Column className="border-b-2 lg:border-b-0 pb-4 lg:pb-0">
             <h3 className="text-xl text-ion-blue">
               In-home sleep apnea test experience
             </h3>
@@ -77,7 +77,7 @@ export function ScreenStepOne() {
               <ArrowRightIcon className="inline-block" />
             </a>
           </Column>
-          <Column className="border-b-2 md:border-b-0 pb-4 md:pb-0">
+          <Column className="border-b-2 lg:border-b-0 pb-4 lg:pb-0">
             <h3 className="text-xl text-ion-blue">
               Is in-home sleep test right for you?
             </h3>

@@ -13,11 +13,11 @@ export function HeroSlider() {
       <Image
         src="/images/banner2-sm.jpg"
         alt="Take free risk assessment test"
-        className="mx-auto md:hidden"
+        className="mx-auto lg:hidden"
         width={640}
         height={480}
       />
-      <div className="hidden md:block relative h-[480px]">
+      <div className="hidden lg:block relative h-[480px]">
         <Slider
           images={ANIMATION.IMAGES}
           variants={ANIMATION.VARIANTS}

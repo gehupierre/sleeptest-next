@@ -5,9 +5,9 @@ import { NavItem } from "@components/ui/nav/nav-item";
 export function HamburgerMenu({}) {
   const [isExpanded, setIsExpanded] = useState<boolean>();
   return (
-    <div className="relative text-right p-3">
+    <div className="lg:hidden relative text-right p-3">
       <button
-        className="md:hidden h-10 w-10 bg-ion-orange"
+        className="h-10 w-10 bg-ion-orange"
         onClick={() => {
           setIsExpanded(!isExpanded);
         }}

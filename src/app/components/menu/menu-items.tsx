@@ -14,8 +14,8 @@ type MenuWrapper = {
 };
 function MenuWrapper({ children }: MenuWrapper) {
   return (
-    <div className="md:w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-      <div className="hidden md:flex justify-end lg:flex-grow">{children}</div>
+    <div className="lg:w-full block flex-grow lg:flex lg:items-center">
+      <div className="hidden lg:flex justify-end lg:flex-grow">{children}</div>
       <HamburgerMenu />
     </div>
   );
