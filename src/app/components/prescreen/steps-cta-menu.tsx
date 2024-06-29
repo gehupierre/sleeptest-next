@@ -26,10 +26,13 @@ function StepCTA({ label }: StepCTAProps) {
 
 function PhoneCTA() {
   return (
-    <div className="flex justify-end text-ion-orange md:text-lg my-2">
+    <div className="flex justify-end text-ion-orange md:text-lg">
       <PhoneIcon />
       <span className="ml-2">
-        Call now for assistance - <a href="tel:1-888-866-5168">888.866.5168</a>{" "}
+        Call now for assistance -{" "}
+        <a href="tel:1-888-866-5168" className="hover:text-ion-bluesky">
+          888.866.5168
+        </a>{" "}
         - 24/7
       </span>
     </div>
@@ -39,12 +42,12 @@ function PhoneCTA() {
 function SocialCTA() {
   return (
     <ul className="flex justify-end w-auto mx-2">
-      <li className="w-7">
+      <li className="w-7 hover:opacity-80">
         <a href="#" aria-label="Facebook">
           <FacebookIcon />
         </a>
       </li>
-      <li className="w-7 mx-2">
+      <li className="w-7 mx-2 hover:opacity-60">
         <a href="#" aria-label="Tweet">
           <TwitterIcon />
         </a>

@@ -12,7 +12,7 @@ export function ScreenStepTwo() {
       <section>
         <StepsCTAMenu
           label="get diagnosed"
-          className="hidden md:block bg-ion-mint-lite border-t"
+          className="hidden md:block bg-ion-mint-lite border-y"
         />
         <div
           id="step-2"

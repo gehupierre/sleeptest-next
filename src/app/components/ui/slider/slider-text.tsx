@@ -47,7 +47,7 @@ export const SliderText: React.FC<SliderTextProps> = ({
           {typeof text === "string" ? (
             text
           ) : (
-            <a href={text.href}>
+            <a href={text.href} className="hover:opacity-80">
               <Image
                 width={text.width ?? 640}
                 height={text.height ?? 160}
