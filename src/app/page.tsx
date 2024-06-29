@@ -8,7 +8,7 @@ import { Footer } from "@components/footer";
 const HeroSlider = dynamic(
   () => import("@components/hero/hero-slider").then((cmp) => cmp.HeroSlider),
   {
-    loading: () => <Loading className="mx-auto" />,
+    loading: () => <Loading className="hidden md:block mx-auto" />,
     ssr: false,
   }
 );

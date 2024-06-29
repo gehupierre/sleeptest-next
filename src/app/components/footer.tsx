@@ -3,15 +3,23 @@ import Image from "next/image";
 export function Footer() {
   return (
     <footer className="w-full">
-      <div className="bg-ion-mint-lite px-40 py-16 pb-20">
+      <div className="bg-ion-mint-lite p-3 md:px-40 md:py-16 pb-20">
+        <Image
+          src="/images/insurance_logos_sm.png"
+          alt="Insurance companies that support testing"
+          className="md:hidden"
+          width={960}
+          height={180}
+        />
         <Image
           src="/images/insurance_logos.jpg"
           alt="Insurance companies that support testing"
+          className="hidden md:inline"
           width={960}
           height={180}
         />
 
-        <p className="my-16 text-sm leading-6">
+        <p className="py-6 md:my-16 text-sm leading-6">
           * We accept and work directly with most Private Insurance companies.
           Based on your benefits, your insurance company may cover up to 100% of
           the cost for an in-home sleep apnea test. Co-payments, deductibles and

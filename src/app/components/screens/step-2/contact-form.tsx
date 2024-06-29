@@ -115,8 +115,8 @@ type RadioFieldProps = {
 function RadioField({ fieldName, label = "" }: RadioFieldProps) {
   return (
     <>
-      <div className="text-md font-medium mb-2 mt-8">{label}</div>
-      <div role="group" aria-label={label} className="mb-3">
+      <div className="text-md font-medium mb-2 mt-8 mx-3 md:mx-0">{label}</div>
+      <div role="group" aria-label={label} className="mb-3 mx-3 md:mx-0">
         <label>
           <Field name={fieldName}>
             {({ field, form }: any) => (
@@ -167,7 +167,7 @@ export function ContactForm() {
       }}
     >
       {({ isSubmitting }) => (
-        <Form className="px-12 py-4">
+        <Form className="md:px-12 py-4 px-3">
           <InputField
             name="fullName"
             placeholder="Your full name"
@@ -205,7 +205,7 @@ export function ContactForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="form-input px-4 py-3 rounded-sm my-10 border-0 bg-ion-blue hover:bg-ion-bluesky text-white text-lg ml-auto block transition-colors delay-150"
+            className="form-input w-full md:w-auto px-4 py-3 rounded-sm mx-auto md:mr-0 my-6 md:my-10 border-0 bg-ion-blue hover:bg-ion-bluesky text-white text-lg ml-auto block transition-colors delay-150"
           >
             Yes, contact me!
           </button>

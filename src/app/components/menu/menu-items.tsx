@@ -14,7 +14,7 @@ export function MenuItems() {
 
   return (
     <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-      <div className="flex justify-end lg:flex-grow">
+      <div className="hidden md:flex justify-end lg:flex-grow">
         <NavItem
           label="about sleep apnea"
           href="#responsive-header"
@@ -57,6 +57,9 @@ export function MenuItems() {
           style={{ marginTop: -7, marginBottom: -7 }}
         />
       </div>
+      <button className="md:hidden h-12 w-12 bg-ion-orange">
+        <span className="sr-only">Open main menu</span>
+      </button>
     </div>
   );
 }

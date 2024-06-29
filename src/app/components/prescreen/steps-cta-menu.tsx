@@ -10,9 +10,12 @@ type StepCTAProps = {
 
 function StepCTA({ label }: StepCTAProps) {
   return (
-    <a href="#step-1" className="text-ion-green hover:text-ion-blue group">
+    <a
+      href="#step-1"
+      className="text-ion-green hover:text-ion-blue group block md:inline text-center md:text-left"
+    >
       <span className="text-lg">{label}</span>
-      <div className="inline-block w-3 h-4 ml-4">
+      <div className="hidden md:inline-block w-3 h-4 ml-4">
         <span className="sr-only">arrow</span>
         <div className="h-3 w-[3px] mb-[-8px] mx-[10.5px] bg-ion-green group-hover:bg-ion-blue" />
         <ArrowDownIcon className="w-4 h-4" />
@@ -23,7 +26,7 @@ function StepCTA({ label }: StepCTAProps) {
 
 function PhoneCTA() {
   return (
-    <div className="flex justify-end text-ion-orange text-lg">
+    <div className="flex justify-end text-ion-orange md:text-lg my-2">
       <PhoneIcon />
       <span className="ml-2">
         Call now for assistance - <a href="tel:1-888-866-5168">888.866.5168</a>{" "}
@@ -59,7 +62,7 @@ export const StepsCTAMenu: React.FC<StepsCTAMenuProps> = ({
 }) => {
   return (
     <div
-      className={`flex w-full justify-between bg-white px-40 py-6 ${className}`}
+      className={`block md:flex w-full justify-between bg-white md:px-40 py-6 ${className}`}
     >
       <StepCTA label={label} />
       <PhoneCTA />

@@ -8,7 +8,7 @@ type VideoCtaProps = {
 };
 export function VideoCta({ imgSrc, imgAlt, href }: VideoCtaProps) {
   return (
-    <div className="relative py-2">
+    <div className="relative py-2 mx-auto">
       <Image src={imgSrc} width="259" height="85" alt={imgAlt} />
       {href && (
         <a
