@@ -3,8 +3,8 @@
 import React from "react";
 import Image from "next/image";
 
-import { SliderText } from "@components/ui/slider/slider-text";
-import { SliderImages } from "@components/ui/slider/slider-images";
+import { SliderTextCentered } from "@components/ui/slider/slider-text-centered";
+import { Slider } from "@components/ui/slider/slider";
 import { ANIMATION } from "@components/hero/config";
 
 export function HeroSlider() {
@@ -18,12 +18,15 @@ export function HeroSlider() {
         height={480}
       />
       <div className="hidden md:block relative h-[480px]">
-        <SliderImages
+        <Slider
           images={ANIMATION.IMAGES}
           variants={ANIMATION.VARIANTS}
           duration={ANIMATION.DURATION}
         />
-        <SliderText duration={ANIMATION.DURATION} texts={ANIMATION.TEXTS} />
+        <SliderTextCentered
+          duration={ANIMATION.DURATION}
+          texts={ANIMATION.TEXTS}
+        />
       </div>
     </section>
   );

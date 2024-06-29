@@ -2,7 +2,7 @@
 
 import { SLIDESHOW } from "@components/screens/step-1/config";
 import { SlideshowText } from "@components/screens/step-1/slideshow-text";
-import { SliderImages } from "@components/ui/slider/slider-images";
+import { Slider } from "@components/ui/slider/slider";
 import { ANIMATION } from "@components/hero/config";
 import { Row } from "@components/ui/columns/row";
 import { Column } from "@components/ui/columns/column";
@@ -40,7 +40,7 @@ export function ScreenStepOne() {
       </section>
       <section>
         <div className="hidden md:block h-[480px]">
-          <SliderImages
+          <Slider
             variants={ANIMATION.VARIANTS}
             duration={SLIDESHOW.DURATION}
             images={SLIDESHOW.images}
