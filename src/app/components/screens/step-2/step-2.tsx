@@ -19,7 +19,7 @@ export function ScreenStepTwo() {
           className="flex w-full bg-ion-mint-lite p-3 md:px-40 md:py-16 md:pb-20"
         >
           <Row>
-            <Column className="md:pr-7">
+            <Column className="md:pr-7 pt-6 md:pt-0">
               <Image
                 alt="Do you snore? Are you always tired?"
                 src="/images/headline1.png"
@@ -38,7 +38,7 @@ export function ScreenStepTwo() {
               <Image
                 src="/images/get-test-happy.png"
                 alt="Get tested for sleep apnea in 5 minutes"
-                className="my-10 mt-10"
+                className="my-10 mx-auto"
                 width={385}
                 height={147}
               />
@@ -97,10 +97,11 @@ export function ScreenStepTwo() {
                 />
                 <ContactForm />
                 <div
-                  className="hidden md:block w-full h-5 absolute bottom-[-20px]"
+                  className="hidden- md:block w-full h-5 absolute bottom-[-20px]"
                   style={{
                     backgroundImage: `url("/images/form_bg_bottom.png")`,
                     backgroundRepeat: "no-repeat",
+                    backgroundPositionX: "center",
                   }}
                 ></div>
               </div>

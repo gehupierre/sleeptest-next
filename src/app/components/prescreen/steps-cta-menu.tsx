@@ -26,7 +26,7 @@ function StepCTA({ label }: StepCTAProps) {
 
 function PhoneCTA() {
   return (
-    <div className="flex justify-end text-ion-orange md:text-lg">
+    <div className="flex justify-center md:justify-end text-ion-orange md:text-lg">
       <PhoneIcon />
       <span className="ml-2">
         Call now for assistance -{" "}

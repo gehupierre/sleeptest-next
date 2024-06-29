@@ -15,6 +15,7 @@ export const SleepTestCTA: React.FC = () => {
         <Image
           alt="Do you snore? Are you always tired?"
           src="/images/call-to-action-banner.png"
+          className="mx-auto"
           width={382}
           height={136}
         />

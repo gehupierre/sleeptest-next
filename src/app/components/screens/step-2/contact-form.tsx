@@ -156,6 +156,23 @@ function RadioField({ fieldName, label = "" }: RadioFieldProps) {
   );
 }
 
+type SubmitButtonProps = {
+  disabled?: boolean;
+  children?: React.ReactNode;
+};
+function SubmitButton({ children, disabled, ...props }: SubmitButtonProps) {
+  return (
+    <button
+      type="submit"
+      disabled={disabled}
+      className="form-input w-full md:w-auto px-4 py-3 rounded-sm mx-auto md:mr-0 my-6 md:my-10 border-0 bg-ion-blue hover:bg-ion-bluesky text-white text-lg ml-auto block transition-colors delay-150"
+      {...props}
+    >
+      {children}
+    </button>
+  );
+}
+
 export function ContactForm() {
   return (
     <Formik
@@ -167,7 +184,7 @@ export function ContactForm() {
       }}
     >
       {({ isSubmitting }) => (
-        <Form className="md:px-12 py-4 px-3">
+        <Form className="px-5 md:px-12 py-4 mx-auto max-w-[468px]">
           <InputField
             name="fullName"
             placeholder="Your full name"
@@ -202,13 +219,7 @@ export function ContactForm() {
             label="Suffer from daytime drowsiness?"
           />
 
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="form-input w-full md:w-auto px-4 py-3 rounded-sm mx-auto md:mr-0 my-6 md:my-10 border-0 bg-ion-blue hover:bg-ion-bluesky text-white text-lg ml-auto block transition-colors delay-150"
-          >
-            Yes, contact me!
-          </button>
+          <SubmitButton disabled={isSubmitting}>Yes, contact me!</SubmitButton>
         </Form>
       )}
     </Formik>
