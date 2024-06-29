@@ -6,7 +6,8 @@ export const SleepTestCTA: React.FC = () => {
       <Image
         src="/images/call-to-action.png"
         alt="Take free risk assessment test"
-        className="mx-auto hidden md:block"
+        // Note: opacity on image to prevent loosing white bg
+        className="mx-auto hidden md:block hover:opacity-80"
         width={960}
         height={230}
       />
