@@ -41,8 +41,11 @@ export function MenuItems() {
       <NavItem
         label="login"
         href="#login"
-        icon={<ArrowRightIcon className="ml-[5px]" />}
-        className="inline-block px-4 py-2 border rounded uppercase text-sm text-white bg-ion-orange hover:text-white hover:bg-red-500"
+        icon={
+          <ArrowRightIcon className="ml-[5px] transition delay-150 group-hover:translate-x-1" />
+        }
+        className="inline-block mr-0 px-4 py-2 border rounded uppercase text-sm text-white bg-ion-orange hover:text-white hover:bg-red-500 group"
+        // Note: add style props to override layout media query
         style={{ marginTop: -7, marginBottom: -7 }}
       />
     </MenuWrapper>
