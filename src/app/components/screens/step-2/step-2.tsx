@@ -38,7 +38,7 @@ export function ScreenStepTwo() {
               <Image
                 src="/images/get-test-happy.png"
                 alt="Get tested for sleep apnea in 5 minutes"
-                className="my-10 mx-auto"
+                className="my-10 mx-auto lg:mx-0"
                 width={385}
                 height={147}
               />
